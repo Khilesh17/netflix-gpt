@@ -74,6 +74,10 @@
 
 Note : For Building Large Forms Use Formik Library
 
+## Que: Why everyting we want to print in console gets printed twice? 
+Ans: This is Because of the Strict mode of React.
+In this mode React does extra rendering of our component to check for some inconsistency in our code. it only happens in development phase not in Production phase. and it is a good thing. 
+
 ## Que: Add FireBase Setup in Your Project.
 Ans: 1. Create a firebase account
     2. Create a Project
@@ -98,7 +102,8 @@ Ans: Go to Firebase doc -> Authentication -> web -> password Authentication -> N
 -> For dispatching action for any auth state change we can use "onAuthStateChanged" in main component level (it can be found in web -> manage user). we can also find update userProfile api here.
 
 
-
+## Que: TMDB Setup
+Ans: Login -> Goto Edit Profile -> API -> Create a Project -> Get the API_KEY and Access Token -> Now search the desired Apis from the TMDB documentation.
 
 
 
