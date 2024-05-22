@@ -26,7 +26,7 @@ const GptSearchBar = () => {
                     onClick={handleGptSearchClick}
                 >
                     {lang[langKey].search}
-                </button>
+                </button> 
             </form>
         </div>
     )
