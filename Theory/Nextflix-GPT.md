@@ -105,7 +105,8 @@ Ans: Go to Firebase doc -> Authentication -> web -> password Authentication -> N
 ## Que: TMDB Setup
 Ans: Login -> Goto Edit Profile -> API -> Create a Project -> Get the API_KEY and Access Token -> Now search the desired Apis from the TMDB documentation.
 
-
+## Que: Integrating GPT API in our Project.
+Ans: 
 
 
 

@@ -1,15 +1,19 @@
 import React from 'react'
 import { signOut } from 'firebase/auth';
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
-import { NETFLIX_LOGO } from '../utils/constants';
+import { NETFLIX_LOGO, SUPPORTED_LANGUAGES } from '../utils/constants';
+import { toggleGptSearchView } from '../redux/slices/gptSlice';
+import { changeLanguage } from '../redux/slices/configSlice';
 
 const Header = () => {
 
+    const dispatch = useDispatch();
     const navigate = useNavigate();
-    
+
     const user = useSelector(state => state.user);
+    const showGptSearch = useSelector(store => store.gpt.showGptSearch);
 
     const handleSignOut = () => {
         signOut(auth).then(() => {
@@ -17,6 +21,14 @@ const Header = () => {
         }).catch((error) => {
             navigate("/error");
         });
+    }
+
+    const handleGptSearch = () => {
+        dispatch(toggleGptSearchView());
+    }
+
+    const handleLanguageChange = (event) => {
+        dispatch(changeLanguage(event.target.value))
     }
 
     return (
@@ -28,12 +40,40 @@ const Header = () => {
             />
             {user && (
                 <div className="flex p-2 gap-3 items-center ">
+
+                    {showGptSearch && <select
+                        className="p-4 rounded-md bg-gray-700 text-white cursor-pointer outline-none"
+                        onChange={handleLanguageChange}
+                    >
+                        {SUPPORTED_LANGUAGES.map((lang) => (
+                            <option
+                                key={lang.identifier}
+                                value={lang.identifier}
+                            >
+                                {lang.name}
+                            </option>
+                        ))}
+                    </select>}
+
+                    <button
+                        onClick={handleGptSearch}
+                        className="font-bold text-slate-800 bg-slate-200 px-4 py-3 rounded-md hover:bg-slate-300 transition-all mr-2"
+                    >
+                        {
+                            showGptSearch
+                                ? "Home"
+                                : "Search"
+                        }
+                    </button>
+
                     <img
                         className="w-14 h-14"
                         alt="usericon"
                         src={user?.photoURL}
                     />
-                    <button onClick={handleSignOut} className="font-bold text-white bg-red-500 px-4 py-3 rounded-md">
+                    <button
+                        onClick={handleSignOut}
+                        className="font-bold text-white bg-red-500 hover:bg-red-600 px-4 py-3 rounded-md transition-all">
                         Sign Out
                     </button>
                 </div>
