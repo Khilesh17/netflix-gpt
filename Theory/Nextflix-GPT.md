@@ -97,19 +97,39 @@ Ans: 1. Create a firebase account
     6. For deployment use "firebase deploy".
 
 ## Que: Adding Firebase Authentication in Project
-Ans: Go to Firebase doc -> Authentication -> web -> password Authentication -> Now follow the steps for sign up and sign in.
+Ans: -> Go to Firebase doc 
+-> Authentication 
+-> web 
+-> password Authentication 
+-> Now follow the steps for sign up and sign in.
 
 -> For dispatching action for any auth state change we can use "onAuthStateChanged" in main component level (it can be found in web -> manage user). we can also find update userProfile api here.
 
 
 ## Que: TMDB Setup
-Ans: Login -> Goto Edit Profile -> API -> Create a Project -> Get the API_KEY and Access Token -> Now search the desired Apis from the TMDB documentation.
+Ans: Login 
+-> Goto Edit Profile 
+-> API 
+-> Create a Project 
+-> Get the API_KEY and Access Token 
+-> Now search the desired Apis from the TMDB documentation.
 
 ## Que: Integrating GPT API in our Project.
+Ans: -> login to platform.openai.com 
+-> create a project 
+-> Get the API key of that Project 
+-> now got to npm openAi to chek how to use apis of openai.
+
+
+## Que: Where to Add Secret Key or use of .env.
 Ans: 
 
 
 
+## Que: Memoisation
+Ans: When we navigate from the home page to the search page, the home page already makes an API call and stores the data in the store. However, when we return to the home page from the search page, it calls the APIs again to fetch the data, even though the data is already present in the store. To optimize this, we will implement memoization.
+
+We only need to check if the data is present in the store. If the data is not present, then we call the function to fetch the data.
 
 
 
