@@ -93,7 +93,7 @@ const Login = () => {
 
             <div className='py-28'>
 
-                <form className="w-8/12 lg:w-5/12 p-12 bg-black mx-auto text-white rounded-lg bg-opacity-80">
+                <form className="w-11/12 md:8/12 lg:w-5/12 p-8 md:p-12 bg-black mx-auto text-white rounded-lg bg-opacity-80">
 
                     <h1 className="font-bold text-3xl py-4">
                         {
@@ -116,13 +116,13 @@ const Login = () => {
                         ref={email}
                         type="email"
                         placeholder='Email Address'
-                        className="p-4 my-4 w-full bg-gray-700"
+                        className="p-4 my-4 w-full bg-gray-700 outline-none"
                     />
                     <input
                         ref={password}
                         type="password"
                         placeholder='Password'
-                        className="p-4 my-4 w-full bg-gray-700"
+                        className="p-4 my-4 w-full bg-gray-700 outline-none"
                     />
 
                     <p className="text-red-500 font-semibold text-lg py-2">

@@ -8,7 +8,7 @@ const VpnError = () => {
 
     return (
         <div className='min-h-screen bg-movies flex justify-center items-center'>
-            <div className='bg-black text-white p-12 rounded-md opacity-80 text-center w-11/12 md:w-9/12'>
+            <div className='bg-black text-white p-12 rounded-md opacity-80 text-center w-11/12 md:w-9/12 -mt-40 md:mt-0'> 
                 <h1 className='font-bold text-4xl text-red-500'>Vpn Problem</h1>
                 <p className='font-semibold mt-6 text-2xl'>TMDB Api is Currently Blocked in India. So please Use Vpn to access the Netflix-GPT</p>
                 <button

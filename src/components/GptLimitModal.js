@@ -12,7 +12,7 @@ const GptLimitModal = () => {
 
   return (
     <div className='absolute top-0  bg-black text-white h-screen w-screen bg-opacity-70 flex justify-center items-center'>
-      <div className='w-9/12 md:w-7/12 text-center bg-black p-14'>
+      <div className='w-10/12 md:w-7/12 text-center bg-black p-8 md:p-14 -mt-40 md:mt-0'>
         <h1 className='text-red-500 text-2xl md:text-3xl font-bold'>Oops ! Sorry for the Incosistency</h1>
         <p className='text-lg mt-5'>It seems we've reached our OpenAI API limit. Please bear with us as this feature will be unavailable for a while. We are working on resolving the issue.</p>
         <button

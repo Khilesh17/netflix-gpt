@@ -122,9 +122,9 @@ Ans: -> login to platform.openai.com
 
 
 ## Que: Where to Add Secret Key or use of .env.
-Ans: 
+Ans: To securely manage and use secret keys, such as API keys, you should store them in environment variables using a .env file. This ensures that sensitive information is not hard-coded into your application's source code.
 
-
+Environment Variable of react app must starts with "REACT_APP_APINAME"
 
 ## Que: Memoisation
 Ans: When we navigate from the home page to the search page, the home page already makes an API call and stores the data in the store. However, when we return to the home page from the search page, it calls the APIs again to fetch the data, even though the data is already present in the store. To optimize this, we will implement memoization.
